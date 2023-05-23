@@ -1,6 +1,14 @@
 # Orquestación de datos en Airflow
 
-## Prerequisitos
+## Índice
+1. [Prerrequisitos](#Prerrequisitos)
+2. [Instalar Apache Airflow](#Instalar-Apache-Airflow)
+3. [Configurar Apache Airflow](#Configurar-Apache-Airflow)
+4. [Arrancar Airflow](#Arrancar-Airflow)
+5. [Crear cuenta gratuita en Google Cloud Platform](#Crear-cuenta-gratuita-en-Google-Cloud-Platform)
+
+
+## Prerrequisitos
 
 - Subsistema de Linux (Se recomienda instalarlo en una máquina virtual de Linux, en docker o en Kubernetes, más información en la [documentación oficial](https://airflow.apache.org/docs/apache-airflow/stable/installation/index.html))
 
@@ -94,3 +102,14 @@ Comprobar usuario con:
 4. Arrancar el scheduler (en otro terminal o con el webserver arrancado en segundo plano)
 
 `airflow scheduler`
+
+## Crear cuenta gratuita en Google Cloud Platform
+(https://console.cloud.google.com/welcome?project=thorn-technologies-public)
+
+Pasos opcionales, pues ya se verán en el workshop, pero se recomienda probar la plataforma de GCP si no se ha usado nunca.
+
+- Añadir un proyecto
+- Habilitar el servicio de BigQuery
+- Habilitar el servicio de Cloud Storage
+- Habilidar el servicio de Cloud Dataproc API 
+- Crear un bucket en Cloud Storage
