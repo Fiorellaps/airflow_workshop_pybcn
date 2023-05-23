@@ -1,3 +1,11 @@
+[<img align="left" src="https://pybcn.org/images/logo.png" alt="español" width="150"/>](https://pybcn.org/events/pydatabcn/pydatabcn_2023/) 
+
+[<img align="right" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="inglés" width="47"/>](https://www.linkedin.com/in/fiorella-piriz-sapio-74569a188/)
+
+
+<br/>
+<br/>
+
 # Orquestación de datos en Airflow
 
 ## Índice
