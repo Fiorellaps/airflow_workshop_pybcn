@@ -119,5 +119,5 @@ Pasos opcionales, pues ya se verán en el workshop, pero se recomienda probar la
 - Añadir un proyecto
 - Habilitar el servicio de BigQuery
 - Habilitar el servicio de Cloud Storage
-- Habilidar el servicio de Cloud Dataproc API 
+- Habilitar el servicio de Cloud Dataproc API 
 - Crear un bucket en Cloud Storage
