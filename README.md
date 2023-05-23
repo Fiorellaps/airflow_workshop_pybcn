@@ -2,31 +2,37 @@
 
 ## Prerequisitos
 
-- Subsistema de Linux (Se recomienda instalarlo en una máquina virtual de Linux, en docker o en Kubernetes)
+- Subsistema de Linux (Se recomienda instalarlo en una máquina virtual de Linux, en docker o en Kubernetes, más información en la [documentación oficial](https://airflow.apache.org/docs/apache-airflow/stable/installation/index.html))
 
-Si estamos en Windows podemos habilitarlo con los siguientes pasos:
+   Si estamos en Windows podemos habilitarlo con los siguientes pasos:
 
-1. Ejecutar el Powershell como administrados
-2. Ejecutar el siguiente comando para habilitar el subsistema de Linux:
+   1. Ejecutar el Powershell como administrados
+   2. Ejecutar el siguiente comando para habilitar el subsistema de Linux:
 
-`.\Dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
+   `.\Dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
 
-3. Reiniciar la máquina
+   3. Reiniciar la máquina
 
-4. Instalar Ubuntu desde Microsoft Store
+   4. Instalar Ubuntu desde Microsoft Store
 
-5. Abrir la consola de Ubuntu y ejecutar el siguiente comando para actualizar las librerías del sistema.
-   `sudo apt update`
+   5. Abrir la consola de Ubuntu y ejecutar el siguiente comando para actualizar las librerías del sistema
+   
+      `sudo apt update`
 
-6. Localiza disco C: o D: en /mnt
-   `cd /mnt/c/Users/xxx/Downloads`
+   6. Localiza disco C: o D: en /mnt
+   
+      `cd /mnt/c/Users/xxx/Downloads`
 
 - Versión de Python>=3
+
   `python --version`
 
 - pip3 instalado
+
   `sudo apt install python3-pip`
+  
   Comprobar la versión:
+  
   `pip3.exe --version`
 
 ## Instalar Apache Airflow
@@ -60,7 +66,7 @@ Abrimos el fichero de configuración de airflow y lo editamos
 
 `nano airflow.cfg`
 
-(Opcional) Deshabilitamos la carga de Dags de ejemplo, Modificando la variable 'load_examples = False'
+(Opcional) Deshabilitamos la carga de Dags de ejemplo, Modificando la variable **'load_examples = False'**
 
 ## Arrancar Airflow
 
