@@ -69,13 +69,14 @@ Abrimos el fichero de configuración de airflow y lo editamos
 `airflow db init`
 
 2. Crear un usuario
-   `airflow users create \
+
+`airflow users create \
 --username admin \
 --firstname admin \
 --lastname admin \
 --role Admin \
 --email admin@admin.org`
-   (Introducir contraseña en el prompt)
+(Introducir contraseña en el prompt)
 
 Comprobar usuario con:
 `airflow users list`
