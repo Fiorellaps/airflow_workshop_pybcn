@@ -126,7 +126,7 @@ BashOperator(
 )
 ```
 
-Datos tomados de [OpenData Barcelona] (https://opendata-ajuntament.barcelona.cat/data/es/dataset/)esm-bcn-evo
+Datos tomados de [OpenData Barcelona](https://opendata-ajuntament.barcelona.cat/data/es/dataset/)esm-bcn-evo
 
 ## 02-load-csv-to-GC
 
