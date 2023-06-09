@@ -1,3 +1,10 @@
+[<img align="left" src="https://pybcn.org/images/logo.png" alt="español" width="150"/>](https://pybcn.org/events/pydatabcn/pydatabcn_2023/)
+
+[<img align="right" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="inglés" width="47"/>](https://www.linkedin.com/in/fiorella-piriz-sapio-74569a188/)
+
+<br/>
+<br/>
+
 # Workshop de Airflow
 
 # 1. Instalación de Airflow en Linux
@@ -126,10 +133,11 @@ BashOperator(
 )
 ```
 
-Datos tomados de [OpenData Barcelona](https://opendata-ajuntament.barcelona.cat/data/es/dataset/)esm-bcn-evo
+Datos tomados de [OpenData Barcelona](https://opendata-ajuntament.barcelona.cat/data/es/dataset/esm-bcn-evo)
 
 - Default args:
-  Hay muchos más argumentos que se pueden ver en https://airflow.apache.org/docs/apache-airflow/1.10.2/code.html#airflow.models.BaseOperator
+
+Hay muchos más argumentos que se pueden ver en https://airflow.apache.org/docs/apache-airflow/1.10.2/code.html#airflow.models.BaseOperator
 
 - Schedule times
 
