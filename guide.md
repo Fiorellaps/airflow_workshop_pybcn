@@ -2,6 +2,8 @@
 
 # 1. Instalación de Airflow en Linux
 
+(Se recomienda instalarlo en una máquina virtual de Linux, en docker o en Kubernetes, más información en la [documentación oficial](https://airflow.apache.org/docs/apache-airflow/stable/installation/index.html))
+
 - Creamos un entorno de Python con virtualenv y lo activamos
 
 
@@ -25,6 +27,8 @@
 ```
 
 <div style="color:green">Airflow ofrece muchos más <a href="https://airflow.apache.org/docs/#providers-packagesdocsapache-airflow-providersindexhtml">providers</a>.
+    
+    
 </div>
 
 - Modificar la configuración de airflow
@@ -60,6 +64,7 @@ airflow version
 
 <div style="color:orange">
     
+- su - postgres; psql; \l (show databases); \du (show users)
     
 - CREATE DATABASE airflow_db;
 
