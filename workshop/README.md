@@ -128,6 +128,13 @@ BashOperator(
 
 Datos tomados de [OpenData Barcelona](https://opendata-ajuntament.barcelona.cat/data/es/dataset/)esm-bcn-evo
 
+- Default args:
+  Hay muchos más argumentos que se pueden ver en https://airflow.apache.org/docs/apache-airflow/1.10.2/code.html#airflow.models.BaseOperator
+
+- Schedule times
+
+Más información en https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/timetable.html
+
 ## 02-load-csv-to-GC
 
 Subir un fichero (en este caso csv) a un bucket de **Google Cloud Storage**.
