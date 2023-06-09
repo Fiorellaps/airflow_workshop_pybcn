@@ -227,17 +227,8 @@ BigQueryExecuteQueryOperator(
 )
 ```
 
-## 05-remove-local-file
 
-Borrar csv de origen, un a vez se han ingestado en el bucket.
-
-<div style="color:orange">
-
-- Paralelización de tareas.
-
- </div>
-
-## 06-email-on-finish
+## 05-email-on-finish
 
 Enviar un correo
 
@@ -258,3 +249,13 @@ EmailOperator(
         dag=dag
 )
 ```
+
+## 06-remove-local-file
+
+Borrar csv de origen, un a vez se han ingestado en el bucket.
+
+<div style="color:orange">
+
+- Paralelización de tareas.
+
+ </div>
