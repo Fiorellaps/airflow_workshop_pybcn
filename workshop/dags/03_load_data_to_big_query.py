@@ -96,8 +96,8 @@ with DAG(**dag_args) as dag:
 
     load_data_to_big_query = GCSToBigQueryOperator(
         task_id='load_data_to_big_query',
-        bucket=bucket_name,
-        source_objects=[destination_file_path], # Todos los elementos del bucket
+        bucket=bucket_name, # Bucket a consultar
+        source_objects=[destination_file_path], # Todos los elementos del bucket desde el que vamos a coger los datos
         source_format='CSV', # Formato de los archivos a insertar
         skip_leading_rows=1, # No considerar la primera fila como datos porque la primera fila son las cabeceras
         field_delimiter=',', # Delimitador

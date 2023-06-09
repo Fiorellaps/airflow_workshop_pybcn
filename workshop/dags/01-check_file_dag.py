@@ -7,14 +7,21 @@ from airflow.utils.dates import days_ago
 import os
 
 default_args = {
-    'owner': 'ADMIN',
-    'start_date': datetime(2022, 12, 1) # date.today(); days_ago(6)
+    'owner': 'ADMIN', # Usuario al que pretenece el DAG
+    'start_date': datetime(2022, 12, 1) # date.today(); days_ago(6) # Fecha de comienzo de la programación
+    #'email': ['airflow@example.com'],
+    #'email_on_failure': False,
+    #'email_on_retry': False,
+    #'retries': 1,
+    #'sla': timedelta(hours=3) # Tiempo máximo de duración del dag
+    #'retry_delay': timedelta(minutes=5),
+    #'end_date': datetime(2016, 1, 1),
 }
 
 dag_args = {
-    'dag_id': '01-check_file_dag',
-    'schedule_interval': '@daily', # 0 * * * *
-    'catchup': False,
+    'dag_id': '01-check_file_dag', # Identificador único
+    'schedule_interval': '@daily', # 0 * * * *; None
+    'catchup': False, # Si se pone al día con la ejecuciones o no
     'default_args': default_args,
     "doc_md":(
     """

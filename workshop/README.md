@@ -173,6 +173,8 @@ PythonOperator(
 )
 ```
 
+Más información sobre dependencia de tareas https://docs.astronomer.io/learn/managing-dependencies
+
 ## 03-load-data-to-big-query
 
 Añadir datos almacenados en **Google Cloud Storage** a **Big Query**.
@@ -200,6 +202,8 @@ GCSToBigQueryOperator(
     google_cloud_storage_conn_id='google_cloud_default' # Valor por defecto
 )
 ```
+
+Más información sobre el operador de GCP https://airflow.apache.org/docs/apache-airflow-providers-google/stable/_api/airflow/providers/google/index.html
 
 ## 04-load-filtered-data-to-big-query
 
