@@ -2,25 +2,34 @@
 
 Creamos un entorno de Python con virtualenv y lo activamos
 
-`python -m venv airflow_env`
+`python -m venv env_airflow`
+
+
 `source airflow_env/bin/ativate`
 
 Definimos AIRFLOW_HOME
+
+
 `export AIRFLOW_HOME=/mnt/hostapath/airflow`
 
 Instalamos airflow desde Pypi
+
 
 `pip install "apache-airflow[gcp]"`
 
 Muchos más [providers](https://airflow.apache.org/docs/#providers-packagesdocsapache-airflow-providersindexhtml)
 
 Modificar la configuración de airflow
+
+
 `nano /root/airflow/airflow.cfg`
 
 - load_examples=False
 - sql_alchemy_conn = postgresql+psycopg2://user:pass@localhost:5432/airflow_db
 
 Comprobamos que está bien instalado
+
+
 `airflow version`
 
 Arrancamos airflow manualmente
