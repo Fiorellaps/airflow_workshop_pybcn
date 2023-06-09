@@ -1,5 +1,5 @@
 # Instalación de Airflow en Linux
-
+(Se recomienda instalarlo en una máquina virtual de Linux, en docker o en Kubernetes, más información en la [documentación oficial](https://airflow.apache.org/docs/apache-airflow/stable/installation/index.html))
 Creamos un entorno de Python con virtualenv y lo activamos
 
 `python -m venv env_airflow`
