@@ -95,18 +95,6 @@ with DAG(**dag_args) as dag:
     Sube un fichero a Google Cloud Storage
     """)
 
-    ##### ELIMINAR EL FICHERO DE ORIGEN
-
-    remove_uploaded_file = BashOperator(
-        task_id='remove_uploaded_file',
-        bash_command=f'rm -f {absolute_file_path}' 
-    )
-
-    remove_uploaded_file.doc_md = ("""
-    ## Bash Operator
-    eliminar el fichero de origen
-    """)
-
     ##### TAREA load_data_to_big_query
     dataset_table =  "airflow-388217.external_data.enquestes"
     load_data_to_big_query = GCSToBigQueryOperator(
@@ -142,12 +130,13 @@ with DAG(**dag_args) as dag:
     success_email = EmailOperator(
         task_id='send_email',
         to=dest_email,
-        subject='La ejecución del dag ' + dag_args['dag_id'] +' correcta',
-        html_content=f'''<h3>ÉXITO EN LA EJECUCIÓN!!</h3> <p>La ejecución del dag {dag_args['dag_id']} ha acabado correctamente :)</p> ''',
+        subject='La ejecución del dag ' + dag_args['dag_id'] +' correcta', # Asunto
+        html_content=f'''<h3>ÉXITO EN LA EJECUCIÓN!!</h3> <p>La ejecución del dag {dag_args['dag_id']} ha acabado correctamente :)</p> ''', # Contenido
         dag=dag
     )
     
     (check_file_task >> 
     upload_csv_to_gcs >> 
-    [load_data_to_big_query, remove_uploaded_file] >> 
+    load_data_to_big_query >> 
     create_table_exiample >> success_email)
+

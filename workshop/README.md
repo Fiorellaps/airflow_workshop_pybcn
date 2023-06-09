@@ -245,6 +245,8 @@ Enviar un correo
 
 - EmailOperator.
 
+[Guía] (https://hevodata.com/learn/airflow-emailoperator/) para configurar el envío de correos con una cuenta de GMAIL
+
  </div>
 
 ```python

@@ -7,6 +7,7 @@ from airflow.models import Variable
 from airflow.operators.python_operator import PythonOperator
 from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQueryOperator
 from airflow.providers.google.cloud.operators.bigquery import BigQueryExecuteQueryOperator
+from airflow.operators.email_operator import EmailOperator
 
 from google.cloud import storage
 import os
@@ -135,9 +136,19 @@ with DAG(**dag_args) as dag:
         use_legacy_sql=False,
         #bigquery_conn_id='google_cloud_default'
     )
+
+    # TAREA  success_email
+    dest_email = ['fpa@nextret.net']
+    success_email = EmailOperator(
+        task_id='send_email',
+        to=dest_email,
+        subject='La ejecución del dag ' + dag_args['dag_id'] +' correcta', # Asunto
+        html_content=f'''<h3>ÉXITO EN LA EJECUCIÓN!!</h3> <p>La ejecución del dag {dag_args['dag_id']} ha acabado correctamente :)</p> ''', # Contenido
+        dag=dag
+    )
     
     (check_file_task >> 
     upload_csv_to_gcs >> 
     [load_data_to_big_query, remove_uploaded_file] >> 
-    create_table_exiample)
+    create_table_exiample >> success_email)
 
